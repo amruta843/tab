@@ -1,0 +1,100 @@
+<div class="container subDiv pt-4">
+    <div class="row">
+        <div class="col-8 offset-2">
+        <ul class="nav nav-pills d-flex justify-content-center ">
+            <li class="nav-item mb-4">
+                <a href="javascript:;" [ngClass]="{'active': selectedFramework=== 'angular'}" 
+                (click)="onTabClick('angular')" class="nav-link" >
+                    Agular
+                </a>
+            
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;" [ngClass]="{'active': selectedFramework==='react'}"
+                (click)="onTabClick('react')" class="nav-link" >
+                    Ract
+                </a>
+            </li>
+            <li class="nav-item">
+                        <!-- if we have only one line function then use fuctionality in event, here we get used the click()with functinality of selectedframework -->
+        
+                <a href="javascript:;" [ngClass]="{'active': selectedFramework === 'node'}"
+                (click)="selectedFramework='node'" class="nav-link" >
+                    Node
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- if we have only one line function then use fuctionality in event, here we get used the click()with functinality of selectedframework -->
+                <a href="javascript:;"  [ngClass]="{'active': selectedFramework === 'express'}" 
+                
+                (click)="selectedFramework='express'"class="nav-link">
+                    Express
+                </a>
+            </li>
+        </ul>
+        <div class="tab-body">
+            <div class="card"*ngIf="selectedFramework === 'angular' ">
+                <div class="card-body">
+                    <strong>Angular</strong>
+                    is an application-design framework and development platform for creating efficient and sophisticated single-page apps
+                    To understand the capabilities of the Angular framework, you need to learn about the:Components,Templates,Directives,Dependency injection
+                    With Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications. 
+                    Angular is designed to make updating as straightforward as possible, so take advantage of the latest developments with minimal effort. 
+                    Best of all, the Angular ecosystem consists of a diverse group of over 1.7 million developers, library authors, and content creators.
+                </div>
+            </div>
+            <div class="card" *ngIf="selectedFramework === 'react' ">
+                <div class="card-body" >
+                    <strong>React</strong>
+                    is a JavaScript library for building user interfaces and is used to build single-page applications.
+                    React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
+                    Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, 
+                    before making the changes in the browser DOM.
+                    React finds out what changes have been made, and changes only what needs to be changed.
+                    Current version of React.JS is V18.0.0 (April 2022).Initial Release to the Public (V0.3.0) was in July 2013.
+                    React.JS was first used in 2011 for Facebook's Newsfeed feature.
+                   
+
+
+                    
+                </div>
+            </div>
+            <div class="card"*ngIf="selectedFramework === 'node' ">
+                <div class="card-body">
+                    <strong>Node</strong>
+                    Node.js is an open source server environment,allows you to run JavaScript on the server.
+                    Node.js is free and It runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+                    Node.js can generate dynamic page content
+                    Node.js can create, open, read, write, delete, and close files on the server
+                    Node.js can collect form data
+                    Node.js can add, delete, modify data in your database
+                    Node.js files contain tasks that will be executed on certain events
+                    A typical event is someone trying to access a port on the server
+                    Node.js files must be initiated on the server before having any effect
+                    Node.js files have extension ".js"
+
+
+        
+                    
+                </div>
+            </div>
+            <div class="card" *ngIf="selectedFramework === 'express' ">
+                <div class="card-body justify-content-center">
+                    <strong>Express</strong>
+                    is a back end web application framework for building RESTful APIs with Node.js, 
+                    released as free and open-source software under the MIT License.
+                    Express is a minimal and flexible Node.js web application framework 
+                    that provides a robust set of features for web and mobile applications.
+                    The original author, TJ Holowaychuk, described it as a Sinatra-inspired server,
+                     meaning that it is relatively minimal with many features available as plugins. 
+                     Express is the back-end component of popular development stacks like the MEAN, 
+                     MERN or MEVN stack, together with the MongoDB database software and a JavaScript 
+                     front-end framework or librar
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    
